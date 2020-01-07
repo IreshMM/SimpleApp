@@ -5,9 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''initace'''
-            }
-
-            steps {
                 sh '''echo Build'''
             }
         }
