@@ -4,7 +4,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh '''initace'''
+                sh '''. /opt/IBM/ace-11.0.0.7/server/bin/mqsiprofile'''
                 sh '''echo Build'''
             }
         }
