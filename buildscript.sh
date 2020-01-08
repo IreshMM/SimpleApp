@@ -1,5 +1,8 @@
 #!/bin/bash 
 
+
+. /opt/IBM/ace-11.0.0.7/server/bin/mqsiprofile
+
 APP_NAME=${PWD##*/}
 
 echo $APP_NAME
