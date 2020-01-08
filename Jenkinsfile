@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''. /opt/IBM/ace-11.0.0.7/server/bin/mqsiprofile'''
-                sh '''pwd'''
+                sh buildscript.sh
             }
         }
 
