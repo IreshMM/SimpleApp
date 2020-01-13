@@ -7,6 +7,16 @@ APP_NAME=${PWD##*/}
 
 echo $APP_NAME
 
+#!/bin/sh
+
+SERVICE=Xvfb
+if ! pgrep -x "$SERVICE" >/dev/null 
+then
+	# Xvfb isn't running let's start it
+        Xvfb :99 &
+	export DISPLAY=:99
+fi
+
 cd ..
 
 mqsicreatebar -data `pwd` -b mybar.bar -a $APP_NAME
