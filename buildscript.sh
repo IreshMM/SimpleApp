@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-
+# Setup environment for ACE toolkit
 . /opt/IBM/ace-11.0.0.7/server/bin/mqsiprofile
 
 APP_NAME=${PWD##*/}
@@ -19,6 +19,6 @@ fi
 
 cd ..
 
-mqsicreatebar -data `pwd` -b mybar.bar -a $APP_NAME
+mqsicreatebar -data `pwd` -b $APP_NAME/mybar.bar -a $APP_NAME
 
 
