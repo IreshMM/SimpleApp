@@ -7,8 +7,6 @@ APP_NAME=${PWD##*/}
 
 echo $APP_NAME
 
-#!/bin/sh
-
 SERVICE=Xvfb
 if ! pgrep -x "$SERVICE" >/dev/null 
 then
