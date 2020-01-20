@@ -7,14 +7,14 @@ APP_NAME=${PWD##*/}
 
 echo $APP_NAME
 
-SERVICE=Xvfb
-if ! pgrep -x "$SERVICE" >/dev/null 
-then
+if ! ( pgrep -x Xvfb > /dev/null || pgrep -x Xorg > /dev/null ); then
 	# Xvfb isn't running let's start it
         Xvfb :99 &
 fi
 
-export DISPLAY=:99
+if ! [ -n "$DISPLAY" ]; then
+	export DISPLAY=:99
+fi
 
 cd ..
 
