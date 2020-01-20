@@ -5,6 +5,8 @@
 
 APP_NAME=${PWD##*/}
 
+pgrep -x Xvfb
+
 echo $APP_NAME
 
 if ! ( pgrep -x Xvfb > /dev/null || pgrep -x Xorg > /dev/null ); then
