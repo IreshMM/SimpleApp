@@ -10,7 +10,7 @@ pipeline {
 
         stage('Deploy To SIT') {
             steps {
-                sh '''echo "Deploying to SIT'''
+                sh '''echo "Deploying to SIT"'''
             }
         }
     }
